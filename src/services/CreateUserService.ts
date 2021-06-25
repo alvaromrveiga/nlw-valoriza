@@ -3,6 +3,7 @@ import { InvalidEmailError } from "../errors/user/InvalidEmailError";
 import { UserExistsError } from "../errors/user/UserExistsError";
 import { UsersRepository } from "../repositories/UsersRepository";
 import { hash } from "bcryptjs";
+import { sendWelcomeEmail } from "../utils/Sendgrid";
 
 interface IUserRequest {
   name: string;
@@ -35,6 +36,7 @@ export class CreateUserService {
     });
 
     await usersRepository.save(user);
+    sendWelcomeEmail({ toEmail: user.email, name: user.name });
 
     return user;
   }
