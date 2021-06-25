@@ -1,5 +1,4 @@
 import sgMail from "@sendgrid/mail";
-import { User } from "../entities/User";
 import { NoSendGridEnvError } from "../errors/utils/NoSendGridEnvError";
 
 interface IEmailCredentials {
