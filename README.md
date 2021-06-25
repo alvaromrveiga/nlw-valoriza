@@ -6,7 +6,7 @@ Projeto desenvolvido na Next Level Week Together da [Rocket Seat](https://rocket
 
 ## Contribuindo
  1. Clone este repositório
- 2. Na raiz do projeto, rode 
+ 1. Na raiz do projeto, rode :
      ```sh 
      $ yarn install 
     ```
@@ -14,8 +14,13 @@ Projeto desenvolvido na Next Level Week Together da [Rocket Seat](https://rocket
      ```sh
      JWT_SECRET="Sua_chave_privada"
      SENDGRID_API_KEY="Sua_chave_Sendgrid"
+     SENDGRID_EMAIL="Seu_email"
      ```
- 1. Na raiz, rode
+ 1. Inicie o banco de dados, na raiz:
+    ```sh 
+     $ yarn typeorm migration:run
+    ```
+ 1. Inicie o servidor de desenvolvimento, na raiz:
     ```sh 
      $ yarn dev 
     ```
