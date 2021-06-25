@@ -3,7 +3,7 @@ import { InvalidEmailError } from "../errors/user/InvalidEmailError";
 import { UserExistsError } from "../errors/user/UserExistsError";
 import { UsersRepository } from "../repositories/UsersRepository";
 import { hash } from "bcryptjs";
-import { sendWelcomeEmail } from "../utils/Sendgrid";
+import { sendWelcomeEmail } from "../utils/sendgrid";
 
 interface IUserRequest {
   name: string;
