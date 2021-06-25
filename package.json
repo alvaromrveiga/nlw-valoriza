@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "env-cmd -f .env.dev ts-node-dev src/index.ts --respawn --transpile-only",
+    "dev": "env-cmd -f .env.local ts-node-dev src/index.ts --respawn --transpile-only",
     "typeorm": "ts-node-dev node_modules/typeorm/cli.js"
   },
   "devDependencies": {
