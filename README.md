@@ -13,7 +13,7 @@ Projeto desenvolvido na Next Level Week Together da [Rocket Seat](https://rocket
  1. Na raiz, crie um arquivo chamado .env.dev com:
      ```sh
      JWT_SECRET="Sua_chave_privada"
-     SENDGRID_API="Sua_chave_Sendgrid"
+     SENDGRID_API_KEY="Sua_chave_Sendgrid"
      ```
  1. Na raiz, rode
     ```sh 
