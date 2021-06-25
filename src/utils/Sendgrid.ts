@@ -27,9 +27,9 @@ export function sendEmail({ to, title, message }: IEmailCredentials) {
   });
 }
 
-export function sendWelcomeEmail(user: User) {
+export function sendWelcomeEmail(user: { toEmail: string; name: string }) {
   sendEmail({
-    to: user.email,
+    to: user.toEmail,
     title: "Bem vindo ao NLW Valoriza!",
     message: `Seja muito bem vindo, ${user.name}!`,
   });
