@@ -1,5 +1,3 @@
-console.log(process.env.DB_URL);
-
 module.exports = {
   type: "postgres",
   url: process.env.DATABASE_URL,
