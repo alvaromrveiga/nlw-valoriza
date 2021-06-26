@@ -2,6 +2,10 @@
 
 Projeto desenvolvido na Next Level Week Together da [Rocket Seat](https://rocketseat.com.br/)
 
+## Teste você
+
+https://veiga-nlw-valoriza.herokuapp.com/
+
 ## Adicionais nesse projeto
 
 - Lançamento de erros conhecidos com os respectivos status codes
@@ -22,8 +26,12 @@ Projeto desenvolvido na Next Level Week Together da [Rocket Seat](https://rocket
     SENDGRID_API_KEY="Sua_chave_Sendgrid"
     SENDGRID_EMAIL="Seu_email"
 
-    ## A senha deve estar em formato de URL
+    # A senha deve estar em formato de URL
     DB_URL="postgres://usuário:senha@host:5432/bancoDeDados"
+
+    # Dev usa src e ts; Produção usa dist e js
+    TYPEORM_FOLDER = "src"
+    TYPEORM_FILE = 'ts'
     ```
 
 1.  Inicie o banco de dados, na raiz:
