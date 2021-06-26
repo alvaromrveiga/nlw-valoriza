@@ -1,4 +1,4 @@
-import { Router } from "express";
+import { Request, Response, Router } from "express";
 import { AuthenticateUserController } from "./controllers/AuthenticateUserController";
 import { CreateComplimentController } from "./controllers/CreateComplimentController";
 import { CreateTagController } from "./controllers/CreateTagController";
@@ -23,6 +23,12 @@ const listUserReceiveComplimentsController =
   new ListUserReceiveComplimentsController();
 const listUserSendComplimentsController =
   new ListUserSendComplimentsController();
+
+router.get("/", (request: Request, response: Response) => {
+  return response.send(
+    "Bem vindo ao meu nlw-valoriza! Use essa url como base no seu Insomnia :)"
+  );
+});
 
 router.post("/users", createUserController.handle);
 
