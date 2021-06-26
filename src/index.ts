@@ -4,8 +4,10 @@ import "express-async-errors";
 import "./database";
 import { router } from "./routes";
 import { KnownError } from "./errors/KnownError";
+import cors from "cors";
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 app.use(router);
 
