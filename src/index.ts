@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 app.use(router);
 
-app.use(express.static(path.join(__dirname, "../client/build")));
+app.use(express.static(path.join(__dirname, "../build")));
 
 app.use(
   (error: Error, request: Request, response: Response, next: NextFunction) => {
@@ -24,7 +24,7 @@ app.use(
 );
 
 app.get("*", (request: Request, response: Response) => {
-  response.sendFile(path.join(__dirname, "../client/build/index.html"));
+  response.sendFile(path.join(__dirname, "../build/index.html"));
 });
 
 const port = process.env.PORT || 3333;
