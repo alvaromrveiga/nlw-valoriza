@@ -1,11 +1,11 @@
 module.exports = {
   type: "postgres",
   url: process.env.DATABASE_URL,
-  migrations: ["src/database/migrations/**.ts"],
-  entities: ["src/entities/**.ts"],
+  migrations: [`${process.env.TYPEORM_FOLDER}/database/migrations/**.ts`],
+  entities: [`${process.env.TYPEORM_FOLDER}/entities/**.ts`],
   cli: {
-    migrationsDir: "src/database/migrations",
-    entitiesDir: "src/entities",
+    migrationsDir: `${process.env.TYPEORM_FOLDER}/database/migrations`,
+    entitiesDir: `${process.env.TYPEORM_FOLDER}/entities`,
   },
   extra: {
     ssl: {
