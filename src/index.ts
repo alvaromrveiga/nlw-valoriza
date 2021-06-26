@@ -5,11 +5,14 @@ import "./database";
 import { router } from "./routes";
 import { KnownError } from "./errors/KnownError";
 import cors from "cors";
+import path from "path";
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(router);
+
+app.use(express.static(path.join(__dirname, "../build")));
 
 app.use(
   (error: Error, request: Request, response: Response, next: NextFunction) => {
@@ -19,6 +22,10 @@ app.use(
     return response.status(500).json(error);
   }
 );
+
+app.get("*", (request: Request, response: Response) => {
+  response.sendFile(path.join(__dirname, "../build/index.html"));
+});
 
 const port = process.env.PORT || 3333;
 

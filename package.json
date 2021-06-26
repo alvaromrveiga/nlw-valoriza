@@ -2,12 +2,14 @@
   "name": "nlw-valoriza",
   "version": "1.0.0",
   "main": "index.js",
+  "repository": "https://github.com/alvaromrveiga/nlw-valoriza",
+  "author": "Álvaro Veiga <alvaromrveiga@gmail.com>",
   "license": "MIT",
   "scripts": {
     "start": "node dist/index.js",
     "postinstall": "tsc",
     "dev": "env-cmd -f .env.local ts-node-dev src/index.ts --respawn --transpile-only",
-    "typeorm": "env-cmd -f ./.env.local ts-node-dev node_modules/typeorm/cli.js"
+    "typeorm": "env-cmd -f .env.local ts-node-dev node_modules/typeorm/cli.js"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
