@@ -23,8 +23,8 @@ app.use(
   }
 );
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/build/index.html"));
+app.get("*", (request: Request, response: Response) => {
+  response.sendFile(path.join(__dirname, "../client/build/index.html"));
 });
 
 const port = process.env.PORT || 3333;
