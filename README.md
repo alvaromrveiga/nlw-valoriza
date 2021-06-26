@@ -23,9 +23,8 @@ https://veiga-nlw-valoriza.herokuapp.com/
 1.  Na raiz, crie um arquivo chamado .env.local com:
 
     ```sh
-    PORT=3000
-
     JWT_SECRET="Sua_chave_privada"
+
     SENDGRID_API_KEY="Sua_chave_Sendgrid"
     SENDGRID_EMAIL="Seu_email"
 
