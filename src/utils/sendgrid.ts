@@ -22,7 +22,7 @@ export function sendEmail({ to, title, message }: IEmailCredentials) {
   };
 
   sgMail.send(email).catch((error) => {
-    throw new Error(error);
+    //throw new Error(error);
   });
 }
 
