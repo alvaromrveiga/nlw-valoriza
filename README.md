@@ -8,6 +8,9 @@ https://veiga-nlw-valoriza.herokuapp.com/
 
 ## Adicionais nesse projeto
 
+- Deploy no [Heroku](https://www.heroku.com/)
+- Envio de emails com [SendGrid](https://sendgrid.com/)
+- Banco de dados [PostgreSQL](https://www.postgresql.org/)
 - Lançamento de erros conhecidos com os respectivos status codes
 
 ## Contribuindo
