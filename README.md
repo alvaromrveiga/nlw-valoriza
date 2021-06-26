@@ -22,11 +22,8 @@ Projeto desenvolvido na Next Level Week Together da [Rocket Seat](https://rocket
     SENDGRID_API_KEY="Sua_chave_Sendgrid"
     SENDGRID_EMAIL="Seu_email"
 
-    DB_HOST="localhost"
-    DB_PORT=5432
-    DB_DATABASE="Seu_banco_Postgresql"
-    DB_USERNAME="Seu_usuário_Postgresql"
-    DB_PASSWORD="Sua_senha_Postgresql"
+    ## A senha deve estar em formato de URL
+    DB_URL="postgres://usuário:senha@host:5432/bancoDeDados"
     ```
 
 1.  Inicie o banco de dados, na raiz:
